@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --a:0;
+}
+
+.title{
+    width: 50px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.left{
+    width:25vw;
+    height: 100vh;
+}
+.right{
+    width: 75vw ;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+    
+}
+
+.home ul li{
+    display: flex;
+    gap: 10px;
+     cursor: pointer;
+    width: 15px;
+    list-style: none;
+    padding-top: 14px;
+}
+.heading{
+    display: flex;
+    gap: 10px;
+     width: 130px;
+   padding-top: 14px;
+   padding: 23px 14px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+.heading img{
+    width: 20px;
+}
+.logo{
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   gap: 5px;
+
+
+}
+
+.lyrically{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+
+.logo {
+    display: flex;
+    /* justify-content: space-between; */
+    cursor: pointer;
+    
+    }
+    .close{
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        
+    }
+    .close:hover{
+        color:#6ad5ed;
+    }
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.library{
+    min-height: 83vh;
+    position: relative;
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0px;
+    
+
+}
+.footer a{
+    color: grey;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    height: 60px;
+    align-items: center;
+    right: 20px;
+}
+
+.buttons{
+    padding-right: 15px;
+}
+.signup-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: #b6b3b3; 
+    border: none; 
+    border-radius: 50px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+
+
+.signup-btn:hover {
+   /* color: white; */
+   color:c;
+    font-size: 1.05rem;
+    font-weight: bold;
+    width:100px;
+    height: 40px;
+
+}
+
+
+.signup-btn:active {
+    background-color: #777; 
+}
+
+.signup-btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); 
+}
+
+/* css for login button */
+.login-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white; 
+    color: black; 
+    border: none; 
+    border-radius: 50px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, width 0.3s ease; 
+}
+
+
+
+.login-btn:hover {
+    background-color:#6ad5ed; 
+    font-size: 1.05rem;
+    font-weight: bold;
+    width:85px;
+    height: 40px;
+}
+
+.login-btn:active {
+    background-color: #777; 
+}
+
+.login-btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); 
+}
+
+
+
+
+
+.cardContainer{
+    display: flex;
+    margin: 30px;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+/* .spotifyPlaylist>h1{
+    color: #6ad5ed;
+} */
+
+.spotifyPlaylist{
+    padding: 18px;
+    padding-bottom: 0px;
+    
+
+}
+.card{
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all 1sec;
+}
+.card:hover{
+    background-color:rgb(79, 79, 79);;
+    cursor: pointer;
+    --a: 1;
+    
+}
+
+
+.card > *{
+    padding-top:8px ;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.play {
+    width: 28px;
+    height: 28px;
+    background-color:#6ad5ed;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 105px;
+    right: 17px;
+    opacity: var(--a);
+    transition: all 0.5s ease-out;
+    
+}
+
+
+.spotify-play-button {
+    display: flex;
+    width: 25px;
+    position: absolute;
+    height: 25px;
+    display: inline-block;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    top: 125px;
+    left: 131px;
+}
+   
+
+.spotify-play-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid black;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    transform: translate(-50%, -50%);
+}
+
+.playbar{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    background-color:#6ad5ed;
+    border-radius: 30px;
+    position:absolute;
+    bottom: 0;
+    width: 98.5%;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* .smallplaybar{
+    display: none;
+} */
+
+.seekbar{
+    height: 3px;
+    width: 95%;
+    background-color:rgb(241, 255, 237);
+    position: absolute;
+    bottom: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.circle{
+    width: 11px;
+    height: 11px;
+    color: white;   
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    bottom: 4.5px;
+    transition: left 0.5s;
+}
+
+.songbuttons{
+    display: flex;
+    padding: 8px;
+    
+}
+.volume{
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+}
+.range{
+padding: 6px;
+}
+
+.songList{
+    max-width:810px;
+    max-height:430px;
+    overflow: auto;
+    overflow-x: hidden;
+   
+}
+.songList ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    gap: 10px;
+    /* width:22vw; */
+    margin: 7px;
+    cursor: pointer;
+    padding: 15px 5px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.songList ul{
+    width: 20vw;
+}
+.hamburger{
+    display: none;
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.songbuttons img{
+    cursor: pointer;
+    display: flex;
+}
+.songinfo, .songtime{
+    color: black;
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font: bolder;
+    
+}
+.songinfo div{
+    word-break: break-all;
+}
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+    .left{
+        background-color: black;
+        position: absolute;
+        left:-120%;
+        transition: all 0.3s;
+        z-index:1;
+        width: 333px;
+    }
+    .right{
+        width:100vw;
+    }
+  
+    .hamburger{
+        display: block;
+    }
+    .close{
+        display: block;
+    }
+    .library{
+        height: 85vh;
+    }
+    .cardContainer{
+        justify-content: center;
+    }
+    .card{
+        width: 70vw;
+    }
+  
+    
+}
+
+ @media (max-width: 625px){
+    .range input{
+        display: none;
+    } 
+}
+  
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .songList ul li{
+        width: 45vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .songList ul li{
+        width: 22vw;
+    }
+}
+/* for another breaking point */
+@media only screen and (max-width: 1065px) {
+    .songList ul li{
+        width: 22vw;
+    }
+}
+/* for another breaking point */
+@media only screen and (max-width: 915px) {
+    .songList ul li{
+        width: 30vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    songList ul li{
+        width: 38vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    songList ul li{
+        width: 30vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    songList ul li{
+        width: 24vw;
+    }
+@media only screen and (max-width: 1400px) {
+        songList ul li{
+            width: 22vw;
+        }
+}
+}
