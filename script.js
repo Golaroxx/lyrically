@@ -40,14 +40,14 @@ async function getsongs(folder){
       let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
     songUL.innerHTML="";
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML +  `<li><img class="invert" src="music.svg" alt="">
+        songUL.innerHTML = songUL.innerHTML +  `<li><img class="invert" src="./music.svg" alt="">
                         <div class="info">
                            <div> ${song.replaceAll("%20", " ")} </div>
                            <div>dollar</div>
                         </div>
                         <div class=" playnow">
                             <span>Play now</span>
-                          <img class="" src="playbar-svgs/play-button.svg" width="30px" > 
+                          <img class="" src="./playbar-svgs/play-button.svg" width="30px" > 
                         </div></li>`;
     }
 
