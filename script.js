@@ -2,6 +2,10 @@ console.log('script is working fine ');
 let currentsong = new Audio();
 let songs;
 let currFolder;
+const play = document.querySelector("#play");
+const previous = document.querySelector("#previous");
+const next = document.querySelector("#next");
+
 
 function convertSecondsToTimeFormat(totalSeconds) {
     if(isNaN(totalSeconds)|| totalSeconds<0){
@@ -111,7 +115,7 @@ const playMusic =(track,pause=false)=>{
     Array.from(document.getElementsByClassName("card")).forEach(e => { 
         e.addEventListener("click", async item => {
             console.log("Fetching Songs")
-            songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)  
+            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`)  
             playMusic(songs[0])
 
         })
@@ -146,10 +150,13 @@ async function main(){
   })
 
    //listen for updating the time
-   currentsong.addEventListener("timeupdate",()=>{
-    document.querySelector(".songtime").innerHTML=`${convertSecondsToTimeFormat(currentsong.currentTime)}/${convertSecondsToTimeFormat(currentsong.duration)}`
-    document.querySelector(".circle").style.left=(currentsong.currentTime / currentsong.duration)*100+"%";
-   })
+   currentsong.addEventListener("timeupdate", () => {
+    if (!isNaN(currentsong.duration)) {
+        document.querySelector(".songtime").innerHTML = `${convertSecondsToTimeFormat(currentsong.currentTime)}/${convertSecondsToTimeFormat(currentsong.duration)}`;
+        document.querySelector(".circle").style.left = (currentsong.currentTime / currentsong.duration) * 100 + "%";
+    }
+});
+
    
    //add a eventlistner to seekbar 
    document.querySelector(".seekbar").addEventListener("click", e=>{
@@ -228,7 +235,7 @@ async function main(){
      })
    
      //relacing your library with current album name
-     document.getElementsByClassName("")
+    //  document.getElementsByClassName("")
 
     }
 
